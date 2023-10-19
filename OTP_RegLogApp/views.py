@@ -25,10 +25,11 @@ class Regview(View):
                 'key': 'textbelt',
             })
             print(resp.json())
-            # print(otp)
+            print(otp)
             subject = 'Hi! User Did You get OTP?'
             message = 'Your OTP is ' + otp
-            form_email = settings.EMAIL_HOST_USER
+            form_email = request.POST['email']
+            print(form_email)
             email = [request.POST['email']]
             send_mail(subject,message,form_email,email)
             return render(request,'otp.html')
