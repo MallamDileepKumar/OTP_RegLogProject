@@ -25,6 +25,7 @@ class Regview(View):
                 'key': 'textbelt',
             })
             print(resp.json())
+            # print(otp)
             subject = 'Hi! User Did You get OTP?'
             message = 'Your OTP is ' + otp
             form_email = settings.EMAIL_HOST_USER
