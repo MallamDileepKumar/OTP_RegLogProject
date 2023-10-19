@@ -9,7 +9,7 @@
     <h1 style="color: red">USER_DATA</h1>
     <form action="./reg/" method="post">
         {% csrf_token %}
-        {{form}} <br><br>
+        <table bgcolor="yellow" border="5" align="center" width="50" height="50" cellpadding="5" cellspacing="5" style="border: 2px solid red">{{form}} </table> <br><br>
         <input type="submit" value="Register" style="color: red">
 
     </form>
